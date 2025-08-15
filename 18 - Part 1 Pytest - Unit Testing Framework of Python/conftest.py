@@ -21,3 +21,8 @@ def setup():
     print("I will be executing the first")
     yield
     print("I will be executing last")
+
+@pytest.fixture()
+def dataLoad():
+    print("user profile data is being created")
+    return["Praveen", "Kumar", "praveenkumarpentamalla.github.io"]
