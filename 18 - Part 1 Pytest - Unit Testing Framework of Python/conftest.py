@@ -8,8 +8,9 @@
 # you can skip with @pytest.mark.skip
 # @pytest.mark.xfail it do not show in output
 # fixtures are used as setup and tear dwon methods for test cases - conftest file to generalize
-# fixture and make it available to all test cases
-
+# fixture and make it available to all test cases (fixture name into parameters of method)
+# datadriven and parameterization can be done with return statement in tuple format
+# when you define fixture scope to class it will run once before class is initiated and at the end
 
 
 import pytest
@@ -26,3 +27,7 @@ def setup():
 def dataLoad():
     print("user profile data is being created")
     return["Praveen", "Kumar", "praveenkumarpentamalla.github.io"]
+
+@pytest.fixture(params=[("chrome", "Praveen", "Kumar"), ("firefox",  "Kumar"), "IE"])
+def crosBrowser(request):
+    return request.param
