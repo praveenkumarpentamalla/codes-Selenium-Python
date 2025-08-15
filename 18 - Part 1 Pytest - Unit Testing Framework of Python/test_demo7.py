@@ -18,26 +18,17 @@ import pytest
 @pytest.mark.usefixtures("setup")
 class TestExample:
 
-    def test_fixtureDemo(self):
-        print("i will execute steps in fixtureDemo method")
+    def text_fixtureDemo(self):
+        print("I will execute steps in fixtureDemo method")
 
+    def text_fixtureDemo1(self):
+        print("I will execute steps in fixtureDemo method")
 
-    def test_first(self):
-        msg = "Hello"
-        assert msg == "Hi"
+    def text_fixtureDemo2(self):
+        print("I will execute steps in fixtureDemo method")
 
-    @pytest.mark.smoke
-    def test_second(self):
-        a = 3
-        b = 4
-        assert a+2 != 6
+    def text_fixtureDemo3(self):
+        print("I will execute steps in fixtureDemo method")
 
-    @pytest.mark.smoke
-    @pytest.mark.skip
-    def test_secondfirsttest(self):
-        msg = "Hello"
-        print("Hi")
-
-    @pytest.mark.xfail
-    def test_one():
-        print("*August*")
+    def text_fixtureDemo4(self):
+        print("I will execute steps in fixtureDemo method")
